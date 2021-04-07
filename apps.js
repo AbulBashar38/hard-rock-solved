@@ -14,6 +14,13 @@ const lyricsInformation = (singerName, songTitle) => {
             showLyrics(data)
         })
 }
+const input = document.getElementById("input-id");
+input.addEventListener("keypress", function(event) {
+  if (event.code === "Enter") {
+   event.preventDefault();
+   document.getElementById("btn-id").click();
+  }
+});
 const showSong = (data) => {
     const songArray = data.data;
     document.getElementById('song-info').innerHTML='',
